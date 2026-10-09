@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    button{
+        background:rgb(103, 255, 2)
+    }
+    button:hover{
+        background-color: rgb(255, 120, 2);
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.75);
+    }
+    </style>
+</head>
+<body>
+    <h2 id="demo">Hello Aashi</h2>
+    <button onclick="changeText()">Click Here</button>
+    <script>
+        function changeText()
+        {
+            document.getElementById("demo").innerHTML="Sada Suahagan Raho";
+        }
+    </script>
+</body>
+</html>

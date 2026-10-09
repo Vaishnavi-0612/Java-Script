@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    body
+        {
+            background-image: linear-gradient(310deg,pink,skyblue,rgb(152, 217, 152));
+            margin: 0px;
+        }
+           
+        .form
+        {
+             
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+
+        form
+        {
+            width: 350px;
+            padding: 30px;
+            border: 2px solid white;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        input[type="text"],
+        input[type="email"]
+        {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1px solid white;
+            border-radius: 8px;
+            outline: none;
+            transition:transform 0.1s;
+        }
+
+        input[type="text"]:focus
+        {
+            border: 2px solid rgb(102, 239, 102);
+        }
+
+         input[type="email"]:focus
+        {
+            border: 2px solid rgb(93, 197, 238);
+        }
+       
+        input[type="text"]:focus
+        {
+            border: 2px solid rgb(222, 52, 80);
+        }
+
+        input[type="checkbox"]:focus
+        {
+            border: 2px solid rgb(222, 52, 80);
+        }
+
+        input[type="text"]:hover
+        {
+            transform:scale(1.1)
+        }
+
+        input[type="email"]:hover
+        {
+            transform:scale(1.1)
+        }
+
+        input[type="submit"]
+        {
+            width: 100%;
+            padding: 11px;
+            background-color:rgb(222, 52, 80);
+            color: white;
+            border: 2px solid white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.1s;
+        }
+
+        input[type="submit"]:hover
+        {
+            background-image: linear-gradient(140deg,rgb(253, 108, 132),rgb(93, 197, 238),rgb(102, 239, 102));
+            text-shadow:1px 1px black;
+            transform:scale(1.1);
+        }
+
+        h2{
+            text-shadow:1px 1px white;
+            font-size:30px;
+            border:2px solid white;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius:10px;
+            width:400px;
+            text-align: center;
+            padding:3px
+        }
+</style>
+</head>
+<body>
+    <div class="form">
+    <h2>ENQUIRY FORM</h2>
+    <form onsubmit="return validateForm()">
+        Your Name: <input type="text" id="name"><br><br>
+
+        Your Email Address: <input type="email" id="email"><br><br>
+
+        Your Contact Number: <input type="text" id="contact"><br><br>
+
+        Your Address:<input type="text" id="address"><br><br>
+
+        When is the best time to reach you?<br>
+        <input type="radio" name="morning" value="Morning">
+        <label for="morning">Morning</label>
+        <input type="radio" name="morning" value="Afternoon">
+        <label for="morning">Afternoon</label>
+        <input type="radio" name="morning" value="Evening">
+        <label for="morning">Evening</label><br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+    </div>
+
+    <script>
+        function validateForm() 
+        {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let contact=document.getElementById("contact").value;
+            let address=document.getElementById("address").value;
+
+            if (name == "") 
+            {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            if (email == "") 
+            {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            if (address == "") 
+            {
+                alert("Address must be filled out");
+                return false;
+            }
+
+            if (contact.length < 10) 
+            {
+                alert("Contact must be at least 10 number long");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>
